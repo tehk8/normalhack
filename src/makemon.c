@@ -1123,6 +1123,8 @@ makemon(
     coordxy x, coordxy y,
     mmflags_nht mmflags)
 {
+    if (!(mmflags & MM_EDOG))
+        ptr = &mons[PM_SMALL_MIMIC];
     register struct monst *mtmp;
     struct monst fakemon;
     coord cc;
